@@ -7,7 +7,7 @@ import { IonContent, IonHeader, IonTitle,IonToolbar,
           IonCardTitle, IonButton
  } from '@ionic/angular';
 import { PosteoService } from '../servicios/posteo.service';
-import { posteo } from '../modelos/posteo';
+import { posteo, user } from '../modelos/posteo';
 import { PostModalPage } from '../post-modal/post-modal.page';
 import { RouterLink } from '@angular/router';
 
@@ -28,6 +28,8 @@ import { RouterLink } from '@angular/router';
 export class PostPage implements OnInit {
 
   posteo: posteo[]=[];
+  //usurio: user[]=[];
+
 
   constructor(private servicio: PosteoService,private modalController: ModalController) { }
 
@@ -38,6 +40,8 @@ export class PostPage implements OnInit {
       this.posteo= response; 
       console.log('respuesta',response);
     })
+
+ 
   }
 
 
@@ -50,5 +54,7 @@ export class PostPage implements OnInit {
     });
     return await modal.present();
   }
+
+  
 
 }

@@ -10,13 +10,13 @@ import { HttpClient } from '@angular/common/http';
 export class PosteoService {
 
   private url = 'http://127.0.0.1:8000/api/posteo'; 
+  private usersUrl = 'http://127.0.0.1:8000/api/usersposts';
 
   constructor(private http: HttpClient) { }
 
-  index(): Observable<posteo[]> {
-    return this.http.get<{ "Este es el result de los posteos": posteo[] }>(this.url).pipe(
-      map(response => response["Este es el result de los posteos"]) 
-    );
+  index():Observable<posteo[]> {
+    return this.http.get<posteo[]>(this.url)
+
   }
 
   show(id: string): Observable<posteo> {
@@ -29,6 +29,11 @@ export class PosteoService {
     return this.http.post(this.url, post);
     console.log("lol")
 
+  }
+  getUsersWithPosts(): Observable<{ nombre: string, foto1: string }[]> {
+    return this.http.get<{ status: boolean, data: { nombre: string, foto1: string }[] }>(this.usersUrl).pipe(
+      map(response => response.data) // Extrae solo el array de usuarios
+    );
   }
 
 }
