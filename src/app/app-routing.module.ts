@@ -40,6 +40,10 @@ const routes: Routes = [
     path: 'detalle/:id',
     loadChildren: () => import('./post-modal/post-modal.module').then( m => m.PostPageModule)
   },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
   
 ];
 

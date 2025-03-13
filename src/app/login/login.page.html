@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar class="bg-gradient-to-r from-gray-900 to-gray-800">
+    <ion-title class="text-white text-2xl font-bold">Iniciar Sesión</ion-title>
+    <ion-buttons slot="end">
+      <ion-button class="text-white hover:text-gray-300 transition-colors">
+        <ion-icon name="close" class="text-xl"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="p-4 bg-gradient-to-b from-gray-800 to-gray-900">
+  <form class="max-w-sm mx-auto mt-10"  >
+    <div class="mb-6">
+      <label for="email" class="block mb-2 text-sm font-medium text-gray-300">Correo Electrónico</label>
+      <input
+        type="email"
+        id="email"
+        class="bg-gray-700 text-white rounded-lg p-3 w-full focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all"
+        placeholder="correo@ejemplo.com"
+        required
+      />
+    </div>
+    <div class="mb-6">
+      <label for="password" class="block mb-2 text-sm font-medium text-gray-300">Contraseña</label>
+      <input
+        type="password"
+        id="password"
+        class="bg-gray-700 text-white rounded-lg p-3 w-full focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all"
+        required
+      />
+    </div>
+    <ion-button
+      type="submit"
+      class="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-bold py-3 rounded-lg shadow-lg hover:shadow-xl transition-all"
+    >
+      Ingresar
+    </ion-button>
+  </form>
+
+  <div class="max-w-sm mx-auto mt-6">
+    <ion-button
+    type="submit" href="/registrar"
+      class="w-full bg-transparent text-blue-400 hover:text-blue-300 font-bold py-3 rounded-lg border border-blue-500 hover:border-blue-400 transition-all"
+      
+      fill="clear"
+    >
+      Registrarse
+    </ion-button>
+  </div>
+
+  <div class="max-w-sm mx-auto mt-6 text-center">
+    <a href="#" class="text-sm text-gray-400 hover:text-gray-300 transition-colors">¿Olvidaste tu contraseña?</a>
+  </div>
+</ion-content>
