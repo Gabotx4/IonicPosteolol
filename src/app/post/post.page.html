@@ -1,0 +1,77 @@
+<ion-header>
+    
+  </ion-header>
+  
+  <ion-content class="bg-gray-800 text-white">
+    <!--  principal -->
+    <ion-grid class="p-2">
+      <ion-row>
+        <!-- Columna principal -->
+        <ion-col size="12" size-md="8">
+          <!--  comentarios -->
+          <div class="mb-6 mt-4 flex items-center gap-2 rounded-xl p-4 bg-gray-700">
+            <ion-avatar>
+              <img src="assets/icon/the.jpg" alt="user photo" />
+            </ion-avatar>
+            <ion-input
+              class="w-full bg-gray-700 rounded-lg p-2"
+              placeholder="¿Qué estás pensando?"
+            ></ion-input>
+            <ion-button class="bg-red-700 hover:bg-red-800" href="/crearpost">
+              Crear
+            </ion-button>
+          </div>
+  
+          <!-- Lista de posts -->
+          <div class="space-y-4" *ngFor="let post of posteo">
+
+            <!-- Post 1 -->
+            <ion-card class="bg-gray-700 p-4 rounded-lg">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                  <ion-avatar>
+                             <!-- este es el de ver 1 -->
+                  
+                    <img src="http://127.0.0.1:8000/storage/images/{{post.imagen}}" alt="user photo" />
+               
+                  </ion-avatar>
+                  <div>
+                    <h4 class="text-sm font-bold">{{post.categoria}}</h4>
+                    <a href="#" class="text-yellow-300 text-xs">ADMIN</a>
+                  </div>
+                </div>
+                <ion-button class="bg-red-700 hover:bg-red-800">Seguir</ion-button>
+              </div>
+              <div class="mt-4">
+                <h2 class="text-2xl font-bold text-white">{{post.titulo}}</h2>
+                <p class="text-lg mt-2 text-gray-100">
+                   {{post.posteo}}
+        
+                </p>
+                <a [routerLink]="['/detalle/',post.id]">
+                <div class="flex justify-center mt-4">
+                  <img src="http://127.0.0.1:8000/storage/images/{{post.imagen}}" alt="Imagen del panita" class="rounded-lg" />
+                </div>
+                </a>
+                <div class="flex gap-4 mt-4">
+                  <ion-button fill="clear">
+                    <img src="assets/icon/coment.png" alt="Comentar" class="w-6 h-6" />
+                  </ion-button>
+                  <ion-button fill="clear">
+                    <img src="assets/icon/ava.png" alt="Compartir" class="w-6 h-6" />
+                  </ion-button>
+                  <ion-button fill="clear">
+                    <img src="assets/icon/like.png" alt="Me gusta" class="w-6 h-6" />
+                  </ion-button>
+                </div>
+              </div>
+            </ion-card>
+  
+
+          </div>
+        </ion-col>
+  
+ 
+      </ion-row>
+    </ion-grid>
+  </ion-content>

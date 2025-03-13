@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-toolbar class="bg-gray-900 text-white">
+    <ion-title>Crear Posteo</ion-title>
+    <ion-buttons slot="end">
+      <ion-button href="/post" class="text-blue-500 hover:text-blue-700 underline">
+        Regresar
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg-gray-800 text-white">
+  <ion-grid class="p-4">
+    <ion-row class="justify-center">
+      <ion-col size="12" size-md="8" size-lg="6">
+        <!-- Formulario -->
+        <form action="#" class="space-y-6" (ngSubmit)="onSubmit()">
+          <!-- Título -->
+          <div>
+            <ion-item class="bg-gray-700 rounded-lg">
+              <ion-label position="floating" class="text-gray-300">Título</ion-label>
+              <ion-input type="text" class="text-white" [(ngModel)]="post.titulo" name="titulo"></ion-input>
+            </ion-item>
+            <div class="text-right text-sm text-gray-400 mt-1">0/30</div>
+          </div>
+
+          <!-- Categoría -->
+          <div class="p-4">
+            <ion-item class="bg-gray-700 rounded-lg p-2">
+              <ion-icon name="pricetag-outline" class="text-gray-300 mr-2"></ion-icon>
+              <ion-label class="text-gray-300">Categoría</ion-label>
+              <ion-select class="text-white" interface="popover" [(ngModel)]="post.categoria" name="categoria">
+                <ion-select-option value="tecnologia">Tecnología</ion-select-option>
+                <ion-select-option value="ciencia">Ciencia</ion-select-option>
+                <ion-select-option value="arte">Arte</ion-select-option>
+                <ion-select-option value="deporte">Deporte</ion-select-option>
+                <ion-select-option value="deporte">Anime</ion-select-option>
+                <ion-select-option value="deporte">Hentai</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </div>
+
+          <!-- Contexto -->
+          <div>
+            <ion-item class="bg-gray-700 rounded-lg">
+              <ion-label position="floating" class="text-gray-300">Contexto</ion-label>
+              <ion-textarea rows="4" class="text-white" [(ngModel)]="post.posteo" name="posteo"></ion-textarea></ion-item>
+            <div class="text-right text-sm text-gray-400 mt-1">0/500</div>
+          </div>
+
+          <!-- Subida de imagen -->
+          <div class="flex items-center justify-center w-full mb-6">
+            <label for="dropzone-file" class="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-700 hover:bg-gray-600">
+              <div class="flex flex-col items-center justify-center pt-5 pb-6">
+                
+           
+                <img id="imgPreview" class="max-w-full h-48 rounded-lg shadow-lg" src="#" alt="Vista previa de la imagen" />
+                <p class="text-xs text-gray-400">Formatos: SVG, PNG, JPG, GIF (Máx: 800x400px)</p>
+              </div>
+              <input id="dropzone-file" accept="image/*" [(ngModel)]="post.imagen" type="file" class="hidden" name="imagen" (change)="previewImage($event, '#imgPreview')" />
+             
+            </label>
+          </div>
+
+       
+          <!-- Botón de Crear -->
+          <div class="text-right">
+            <ion-button type="submit"  class="bg-red-700 hover:bg-red-800">
+              <ion-icon name="create-outline" class="mr-2"></ion-icon> CREAR
+            </ion-button>
+          </div>
+        </form>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

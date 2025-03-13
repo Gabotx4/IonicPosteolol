@@ -1,0 +1,59 @@
+<ion-header>
+  <!-- Puedes agregar un toolbar o botones de navegación aquí si es necesario -->
+</ion-header>
+
+<ion-content class="bg-gray-800 text-white">
+  <!-- Contenedor principal -->
+  <ion-grid class="p-4">
+    <ion-row>
+      <!-- Columna principal -->
+      <ion-col size="12" size-md="8" class="mx-auto">
+        <!-- Tarjeta de post detallado -->
+        <ion-card class="bg-gray-700 p-6 rounded-lg shadow-lg">
+          <!-- Encabezado del post (usuario, categoría, etc.) -->
+          <div class="flex items-center justify-between mb-6">
+            <div class="flex items-center gap-3">
+              <ion-avatar>
+                <img src="http://127.0.0.1:8000/storage/images/{{post.imagen}}" alt="Foto de perfil" class="w-12 h-12" />
+              </ion-avatar>
+              <div>
+                <h4 class="text-lg font-bold text-white">{{post.categoria}}</h4>
+                <a href="#" class="text-yellow-300 text-sm">ADMIN</a>
+              </div>
+            </div>
+            <ion-button class="bg-red-700 hover:bg-red-800 text-sm">Seguir</ion-button>
+          </div>
+
+          <!-- Contenido del post -->
+          <div class="mt-4">
+            <h2 class="text-3xl font-bold text-white mb-4">{{post.titulo}}</h2>
+            <p class="text-lg text-gray-100 leading-relaxed">
+              {{post.posteo}}
+            </p>
+          </div>
+
+          <!-- Imagen del post -->
+          <div class="mt-6">
+            <img src="http://127.0.0.1:8000/storage/images/{{post.imagen}}" alt="Imagen del post" class="rounded-lg w-full" />
+          </div>
+
+          <!-- Acciones (like, comentar, compartir) -->
+          <div class="flex gap-4 mt-6">
+            <ion-button fill="clear" class="text-gray-300 hover:text-white">
+              <img src="assets/icon/like.png" alt="Me gusta" class="w-6 h-6" />
+              <span class="ml-2">Me gusta</span>
+            </ion-button>
+            <ion-button fill="clear" class="text-gray-300 hover:text-white">
+              <img src="assets/icon/coment.png" alt="Comentar" class="w-6 h-6" />
+              <span class="ml-2">Comentar</span>
+            </ion-button>
+            <ion-button fill="clear" class="text-gray-300 hover:text-white">
+              <img src="assets/icon/ava.png" alt="Compartir" class="w-6 h-6" />
+              <span class="ml-2">Compartir</span>
+            </ion-button>
+          </div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

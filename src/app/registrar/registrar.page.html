@@ -1,0 +1,74 @@
+<ion-header>
+  <ion-toolbar class="bg-gray-900 text-white">
+    <ion-title>Crear Usuario</ion-title>
+    <ion-buttons slot="end">
+      <ion-button href="/post" class="text-blue-500 hover:text-blue-700 underline">
+        Regresar
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg-gray-100">
+  <ion-grid class="p-4">
+    <ion-row class="justify-center">
+      <ion-col size="12" size-md="8" size-lg="6">
+        <!-- Formulario -->
+        <ion-card class="bg-white p-8 rounded-lg shadow-lg">
+          <h2 class="text-2xl font-bold mb-6 text-center">Regístrate</h2>
+          <form>
+            <!-- Nombre de usuario -->
+            <div class="mb-4">
+              <ion-item class="bg-white rounded-lg">
+                <ion-label position="floating">Nombre de usuario</ion-label>
+                <ion-input
+                  type="text"
+                  placeholder="Elige un nombre de usuario"
+                  class="text-gray-700"
+                ></ion-input>
+              </ion-item>
+            </div>
+
+            <!-- Correo electrónico -->
+            <div class="mb-4">
+              <ion-item class="bg-white rounded-lg">
+                <ion-label position="floating">Correo electrónico</ion-label>
+                <ion-input
+                  type="email"
+                  placeholder="Introduce tu correo electrónico"
+                  class="text-gray-700"
+                ></ion-input>
+              </ion-item>
+            </div>
+
+            <!-- Contraseña -->
+            <div class="mb-6">
+              <ion-item class="bg-white rounded-lg">
+                <ion-label position="floating">Contraseña</ion-label>
+                <ion-input
+                  type="password"
+                  placeholder="Crea una contraseña"
+                  class="text-gray-700"
+                ></ion-input>
+              </ion-item>
+            </div>
+
+            <!-- Botón de registro -->
+            <ion-button
+              type="submit"
+              expand="full"
+              class="bg-blue-500 text-white hover:bg-blue-600"
+            >
+              Registrarse
+            </ion-button>
+          </form>
+
+          <!-- Enlace para iniciar sesión -->
+          <p class="mt-4 text-center text-gray-600">
+            ¿Ya tienes una cuenta? <a href="#" class="text-blue-500 hover:underline">Inicia sesión</a>
+          </p>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

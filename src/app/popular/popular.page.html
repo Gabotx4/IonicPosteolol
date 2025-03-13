@@ -1,0 +1,258 @@
+<ion-header>
+  <ion-toolbar class="bg-gray-900 text-white">
+    <ion-title>Posts</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg-gray-800 text-white">
+  <!-- Grid principal -->
+  <ion-grid class="p-2">
+    <ion-row>
+      <!--  carrusel -->
+      <ion-col size="12">
+        <div class="flex items-center justify-center">
+          <div class="relative w-full">
+            <div class="relative h-56 overflow-hidden rounded-lg md:h-96 flex items-center justify-between gap-4">
+              <!-- Primera tarjeta -->
+              <ion-card class="relative max-w-sm rounded-lg shadow-lg flex flex-col justify-end items-center bg-cover bg-center text-white"
+                style="background-image: url('assets/icon/the.jpg'); height: 300px;">
+                <a href="#">
+                  <div class="bg-black bg-opacity-50 p-4 text-center w-full">
+                    <h5 class="mb-2 text-2xl font-bold">¿El Streamer mas bot?</h5>
+                    <p class="text-sm">Streamer que dejo el mundo del gaming por una .</p>
+                  </div>
+                </a>
+              </ion-card>
+
+              <!-- Segunda tarjeta -->
+              <ion-card class="relative max-w-sm rounded-lg shadow-lg flex flex-col justify-end items-center bg-cover bg-center text-white"
+                style="background-image: url('assets/icon/panita.jpeg'); height: 300px;">
+                <a href="#">
+                  <div class="bg-black bg-opacity-50 p-4 text-center w-full">
+                    <h5 class="mb-2 text-2xl font-bold">¿Por qué se fue de internet?</h5>
+                    <p class="text-sm">El bullying cibernético a un yucateco.</p>
+                  </div>
+                </a>
+              </ion-card>
+
+              <!-- Tercera tarjeta -->
+              <ion-card class="relative max-w-sm rounded-lg shadow-lg flex flex-col justify-end items-center bg-cover bg-center text-white"
+                style="background-image: url('assets/icon/cd.jpg'); height: 300px;">
+                <a href="#">
+                  <div class="bg-black bg-opacity-50 p-4 text-center w-full">
+                    <h5 class="mb-2 text-2xl font-bold">¿El mejor anime del mundo?</h5>
+                    <p class="text-sm">Code Geass es considerado...</p>
+                  </div>
+                </a>
+              </ion-card>
+
+              <!-- Cuarta tarjeta -->
+              <ion-card class="relative max-w-sm rounded-lg shadow-lg flex flex-col justify-end items-center bg-cover bg-center text-white"
+                style="background-image: url('assets/icon/vg.jpeg'); height: 300px;">
+                <a href="#">
+                  <div class="bg-black bg-opacity-50 p-4 text-center w-full">
+                    <h5 class="mb-2 text-2xl font-bold">¿La veldad del año IV?</h5>
+                    <p class="text-sm">Ehh vegetta eres el mejor youtuber</p>
+                  </div>
+                </a>
+              </ion-card>
+            </div>
+          </div>
+        </div>
+      </ion-col>
+      <ion-col size="12" size-md="8">
+        <!-- Input para comentarios -->
+        <div class="mb-6 mt-4 flex items-center gap-2 rounded-xl p-4 bg-gray-700">
+          <ion-avatar>
+            <img src="assets/icon/the.jpg" alt="user photo" />
+          </ion-avatar>
+          <ion-input
+            class="w-full bg-gray-700 rounded-lg p-2"
+            placeholder="¿Qué estás pensando?"
+          ></ion-input>
+          <ion-button class="bg-red-700 hover:bg-red-800" href="/crearpost">
+            Crear
+          </ion-button>
+        </div>
+
+        <!-- Lista de posts -->
+        <div class="space-y-4">
+          <!-- Post 1 -->
+          <ion-card class="bg-gray-700 p-4 rounded-lg">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <ion-avatar>
+                  <img src="assets/icon/the.jpg" alt="user photo" />
+                </ion-avatar>
+                <div>
+                  <h4 class="text-sm font-bold">DG/DAzhlo32</h4>
+                  <a href="#" class="text-yellow-300 text-xs">ADMIN</a>
+                </div>
+              </div>
+              <ion-button class="bg-red-700 hover:bg-red-800">Seguir</ion-button>
+            </div>
+            <div class="mt-4">
+              <h2 class="text-2xl font-bold text-white">¿Por qué se fue el panita?</h2>
+              <p class="text-lg mt-2 text-gray-100">
+                  El panita se retira de internet por el bullying cibernético ya que la gente le mandaba muchos rappis y lo hacían sentir mal. Su madre le dijo que se saliera de internet porque ya iba a entrar a la escuela y no quería que le hicieran bullying en la escuela. Este jovencito, a sus 25 años, ya no aguantaba el bullying cibernético. La gente en esta sociedad es muy mala y no tiene corazón, ya que se burlan de la gente que es bautista.
+      
+              </p>
+              <div class="flex justify-center mt-4">
+                <img src="assets/icon/panita.jpeg" alt="Imagen del panita" class="rounded-lg" />
+              </div>
+              <div class="flex gap-4 mt-4">
+                <ion-button fill="clear">
+                  <img src="assets/icon/coment.png" alt="Comentar" class="w-6 h-6" />
+                </ion-button>
+                <ion-button fill="clear">
+                  <img src="assets/icon/ava.png" alt="Compartir" class="w-6 h-6" />
+                </ion-button>
+                <ion-button fill="clear">
+                  <img src="assets/icon/like.png" alt="Me gusta" class="w-6 h-6" />
+                </ion-button>
+              </div>
+            </div>
+          </ion-card>
+
+          <!-- Post 2 -->
+          <ion-card class="bg-gray-700 p-4 rounded-lg">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <ion-avatar>
+                  <img src="assets/icon/la.jpeg" alt="user photo" />
+                </ion-avatar>
+                <div>
+                  <h4 class="text-sm font-bold">DG/Shadow666</h4>
+                  <a href="#" class="text-yellow-300 text-xs">S.ADMIN</a>
+                </div>
+              </div>
+              <ion-button class="bg-red-700 hover:bg-red-800">Seguir</ion-button>
+            </div>
+            <div class="mt-4">
+              <h2 class="text-2xl font-bold text-white">¿Nisekoi que tan bueno es?</h2>
+              <p class="text-lg mt-2 text-gray-100">
+                  e oído hablar de Nisekoi, por supuesto, pero cuando leí los resúmenes (en MAL y Wikipedia), 
+                  inmediatamente lo descarté simplemente porque era un manga de harén que seguía añadiendo a dicho harén
+                   (a pesar de saber quién terminará). siendo la pareja principal al final). Pero ahora me pregunto... ¿estoy siendo demasiado duro con esto? ¿Debería recogerlo?
+              </p>
+              <div class="flex justify-center mt-4">
+                <img src="assets/icon/ad.jpg" alt="Nisekoi" class="rounded-lg" />
+              </div>
+              <div class="flex gap-4 mt-4">
+                <ion-button fill="clear">
+                  <img src="assets/icon/coment.png" alt="Comentar" class="w-6 h-6" />
+                </ion-button>
+                <ion-button fill="clear">
+                  <img src="assets/icon/ava.png" alt="Compartir" class="w-6 h-6" />
+                </ion-button>
+                <ion-button fill="clear">
+                  <img src="assets/icon/like.png" alt="Me gusta" class="w-6 h-6" />
+                </ion-button>
+              </div>
+            </div>
+          </ion-card>
+
+          <!-- Post 3 -->
+          <ion-card class="bg-gray-700 p-4 rounded-lg">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <ion-avatar>
+                  <img src="assets/icon/ryu.jpg" alt="user photo" />
+                </ion-avatar>
+                <div>
+                  <h4 class="text-sm font-bold">DG/GaboNSK13</h4>
+                  <a href="#" class="text-yellow-300 text-xs">BetaTestear</a>
+                </div>
+              </div>
+              <ion-button class="bg-red-700 hover:bg-red-800">Seguir</ion-button>
+            </div>
+            <div class="mt-4">
+              <h2 class="text-2xl font-bold text-white">¿Que opinan de mi edit?</h2>
+              <p class="text-lg mt-2 text-gray-100">
+                  Este edit lo cree con mucho esfuerzo y me tarde mas de 2 horas en hacerlo espero y les guste algo en lo que pudea mejorar espero sus consejos y criticas constructivas.
+              </p>
+              <div class="flex justify-center mt-4">
+                <video controls class="rounded-lg">
+                  <source src="assets/icon/Edit.mp4" type="video/mp4" />
+                  Tu navegador no soporta la reproducción de videos.
+                </video>
+              </div>
+              <div class="flex gap-4 mt-4">
+                <ion-button fill="clear">
+                  <img src="assets/icon/coment.png" alt="Comentar" class="w-6 h-6" />
+                </ion-button>
+                <ion-button fill="clear">
+                  <img src="assets/icon/ava.png" alt="Compartir" class="w-6 h-6" />
+                </ion-button>
+                <ion-button fill="clear">
+                  <img src="assets/icon/like.png" alt="Me gusta" class="w-6 h-6" />
+                </ion-button>
+              </div>
+            </div>
+          </ion-card>
+
+          <ion-card class="bg-gray-700 p-4 rounded-lg">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                  <ion-avatar>
+                    <img src="assets/icon/ryu.jpg" alt="user photo" />
+                  </ion-avatar>
+                  <div>
+                    <h4 class="text-sm font-bold">DG/Shadow666</h4>
+                    <a href="#" class="text-yellow-300 text-xs">S.ADMIN</a>
+                  </div>
+                </div>
+                <ion-button class="bg-red-700 hover:bg-red-800">Seguir</ion-button>
+              </div>
+              <div class="mt-4">
+                <h2 class="text-2xl font-bold text-white">No te tocaba Teresa ☹️</h2>
+                <p class="text-lg mt-2 text-gray-100">
+                  Siendo una claymore orgullosa y de actitud seria, era conocida como La sonriente Teresa debido a su falta de técnicas distintivas,
+             siendo su tenue sonrisa en las batallas lo más distintivo que tenía. La habilidad por la cuál Teresa era conocida era debido a su increíble 
+             capacidad para leer el yoki de forma natural.
+                </p>
+                <div class="flex justify-center mt-4">
+                  <img src="assets/icon/cla.webp" alt="Nisekoi" class="rounded-lg" />
+                </div>
+                <div class="flex gap-4 mt-4">
+                  <ion-button fill="clear">
+                    <img src="assets/icon/coment.png" alt="Comentar" class="w-6 h-6" />
+                  </ion-button>
+                  <ion-button fill="clear">
+                    <img src="assets/icon/ava.png" alt="Compartir" class="w-6 h-6" />
+                  </ion-button>
+                  <ion-button fill="clear">
+                    <img src="assets/icon/like.png" alt="Me gusta" class="w-6 h-6" />
+                  </ion-button>
+                </div>
+              </div>
+            </ion-card>
+
+        </div>
+      </ion-col>
+
+      <!-- Columna lateral (posts recientes) -->
+      <ion-col size="12" size-md="4">
+        <ion-card class="bg-gray-700 p-4 rounded-lg sticky top-4">
+          <h2 class="text-center font-bold text-white text-sm">POST RECIENTES</h2>
+          <div class="space-y-4 mt-4">
+            <!-- Post reciente 1 -->
+            <div class="flex items-center gap-2">
+              <ion-avatar>
+                <img src="assets/icon/the.jpg" alt="user photo" />
+              </ion-avatar>
+              <div>
+                <h4 class="text-sm font-bold">DG/DAzhlo32</h4>
+                <a href="#" class="text-yellow-300 text-xs">ADMIN</a>
+              </div>
+            </div>
+            <p class="text-sm">¿El Streamer más bot?</p>
+            <hr class="border-gray-500" />
+          </div>
+          <!-- Repite para otros posts recientes -->
+        </ion-card>
+      </ion-col>
+     
+    </ion-row>
+  </ion-grid>
+</ion-content>

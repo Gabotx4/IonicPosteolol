@@ -1,0 +1,86 @@
+<ion-app>
+  <!-- Menú lateral -->
+  <ion-menu side="start" contentId="main-content" class="bg-gray-900 text-white">
+    <ion-header>
+      <ion-toolbar class="bg-gray-800">
+        <ion-title>Menú</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="p-4">
+      <ion-list class="space-y-2">
+        <ion-list-header class="text-sm font-semibold text-gray-400">Top</ion-list-header>
+        <ion-item class="hover:bg-gray-700 rounded-lg" routerLink="/post">Home</ion-item>
+        <ion-item class="hover:bg-gray-700 rounded-lg" routerLink="/popular">Popular</ion-item>
+        <ion-item class="hover:bg-gray-700 rounded-lg" routerLink="/perfil">Mi perfil</ion-item>
+
+        <ion-list-header class="text-sm font-semibold text-gray-400">Categorías</ion-list-header>
+        <ion-item class="hover:bg-gray-700 rounded-lg" href="#">Cine</ion-item>
+
+        <ion-list-header class="text-sm font-semibold text-gray-400">Recursos</ion-list-header>
+        <ion-item class="hover:bg-gray-700 rounded-lg" href="/registrar">Crear cuenta</ion-item>
+
+        <ion-list-header class="text-sm font-semibold text-gray-400">Enlaces adicionales</ion-list-header>
+        <ion-item class="hover:bg-gray-700 rounded-lg" href="#">Privacidad</ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <!-- Barra de navegación -->
+  <ion-header>
+    <ion-toolbar class="bg-gray-900 text-white">
+      <ion-buttons slot="start">
+        <ion-menu-button class="text-white"></ion-menu-button>
+      </ion-buttons>
+      <ion-title>POSTDG</ion-title>
+      <ion-buttons slot="end">
+        <ion-button class="text-white" (click)="openLoginModal()">Login</ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+  <!-- Contenido principal -->
+  <ion-content id="main-content" class="bg-gray-100">
+    <router-outlet></router-outlet>
+  </ion-content>
+
+  <!-- Modal de login -->
+  <ion-modal #loginModal class="bg-gray-800 bg-opacity-90">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar class="bg-gray-900">
+          <ion-title class="text-white">LOGIN</ion-title>
+          <ion-buttons slot="end">
+            <ion-button class="text-white" (click)="closeLoginModal()">
+              <ion-icon name="close"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="p-4">
+        <form class="max-w-sm mx-auto" (ngSubmit)="onLogin()">
+          <div class="mb-5">
+            <label for="email" class="block mb-2 text-sm font-medium text-white">Correo Electrónico</label>
+            <input
+              type="email"
+              id="email"
+              class="bg-gray-700 text-white rounded-lg p-2 w-full"
+              placeholder="correo@ejemplo.com"
+              required
+            />
+          </div>
+          <div class="mb-5">
+            <label for="password" class="block mb-2 text-sm font-medium text-white">Contraseña</label>
+            <input
+              type="password"
+              id="password"
+              class="bg-gray-700 text-white rounded-lg p-2 w-full"
+              required
+            />
+          </div>
+          <ion-button type="submit" class="w-full bg-blue-500 hover:bg-blue-600">Ingresar</ion-button>
+        </form>
+        <ion-button class="w-full mt-4" routerLink="/registrar" fill="clear">Registrarse</ion-button>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+</ion-app>

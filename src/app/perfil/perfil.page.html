@@ -1,0 +1,85 @@
+<ion-header>
+  <ion-toolbar class="bg-gray-900 text-white">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/post" class="text-white"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Mi Perfil</ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="settings-outline" class="text-white"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg-gray-100">
+  <!-- Sección de información del perfil -->
+  <div class="p-4">
+    <!-- Foto de perfil y nombre -->
+    <div class="flex flex-col items-center">
+      <ion-avatar class="w-24 h-24 mb-4">
+        <img src="assets/icon/ryu.jpg" alt="Foto de perfil" />
+      </ion-avatar>
+      <h1 class="text-2xl font-bold text-yellow-300">Gabriel Salazar</h1>
+      <p class="text-red-300">GaboNSK13</p>
+    </div>
+
+    <!-- Biografía -->
+    <div class="mt-4 text-center">
+      <p class="text-sky-50">
+        Desarrollador de paginas XXX y amante de los gatos, no no me gustan los furros. proplayer en apex
+      </p>
+    </div>
+
+  
+    <div class="flex justify-around mt-6">
+      <div class="text-center">
+        <p class="text-xl font-bold text-violet-400">15</p>
+        <p class="text-yellow-300">Publicaciones</p>
+      </div>
+      <div class="text-center">
+        <p class="text-xl font-bold text-white">1.2K</p>
+        <p class="text-yellow-300">Seguidores</p>
+      </div>
+      <div class="text-center">
+        <p class="text-xl font-bold text-white">350</p>
+        <p class="text-yellow-300">Seguidos</p>
+      </div>
+    </div>
+
+    <!-- Botones de acción -->
+    <div class="mt-6 flex justify-center gap-4">
+      <ion-button class="bg-blue-500 text-white hover:bg-blue-600">
+        Editar Perfil
+      </ion-button>
+      <ion-button class="bg-gray-300 text-gray-800 hover:bg-gray-400">
+        Compartir
+      </ion-button>
+    </div>
+  </div>
+
+  <!-- Publicaciones recientes -->
+  <div class="p-4">
+    <h2 class="text-xl font-bold text-white mb-4">Publicaciones Recientes</h2>
+    <ion-card class="mb-4">
+      <img src="assets/icon/nsk.jpg" alt="Publicación 1" class="w-full h-48 object-cover" />
+      <ion-card-content class="p-4">
+        <p class="text-yellow-300">Acabo de ver este h y uff es el mejor del mundo </p>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="mb-4">
+      <img src="assets/icon/team.webp" alt="Publicación 2" class="w-full h-48 object-cover" />
+      <ion-card-content class="p-4">
+        <p class="text-yellow-300">Disfrutando de un buen anime</p>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="mb-4">
+      <img src="assets/icon/la.jpeg" alt="Publicación 3" class="w-full h-48 object-cover" />
+      <ion-card-content class="p-4">
+        <p class="text-yellow-300">La eminencia de la sombra</p>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
